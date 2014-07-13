@@ -1,0 +1,19 @@
+h1{ 
+	font-family: 'Roboto', sans-serif;
+	float:right;
+	padding-right:660px;
+	padding-top:20px;
+	}
+	
+.header_lorem_ipsum{padding-right:500px;}
+.header_user_info{padding-right:620px;}
+.lorem_ipsum,.user_info{
+	font-family: 'Roboto', sans-serif;
+	border:0px solid #250013;
+	border-radius:25px;
+	background-color:#F0F0E9;
+	padding:10px;
+	padding-left:20px;
+	margin-right:300px;
+	margin-top:20px;
+}
