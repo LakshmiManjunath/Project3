@@ -1,5 +1,5 @@
 <h1>Project 3: Developer's Best Friend</h1>
-<p><b>Live URL:</b></p>
+<p><b>Live URL:</b> http://project3-pralak.gopagoda.com/ </p>
 <p><b>Description of the Project</b><br>
 1. This app demontrates the basic essentials of building a Laravel-based site.<br>
 2. This project helps us to understand different stages of Laravel-based app building;<br>
