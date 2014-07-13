@@ -1,12 +1,19 @@
-h1{ 
-	font-family: 'Roboto', sans-serif;
-	float:right;
-	padding-right:660px;
-	padding-top:20px;
-	}
-	
-.header_lorem_ipsum{padding-right:500px;}
-.header_user_info{padding-right:620px;}
+body{
+	border:1px solid grey;border-radius:25px;
+	padding:30px;
+	margin-right:150px;margin-left:150px;}
+
+h1{font-family: 'Roboto', sans-serif;float:right;}
+h2{color:#7D5A6B;}
+
+img{margin-left:80px;margin-right:80px;}
+
+a{text-decoration:none;font-weight:bold;}
+a:hover{color:#B28099;}
+
+.header_index{margin-top:50px;margin-right:100px;}
+.header_lorem_ipsum{margin-top:-100px;margin-right:20px;}
+.header_user_info{margin-top:50px;margin-right:70px;}
 .lorem_ipsum,.user_info{
 	font-family: 'Roboto', sans-serif;
 	border:0px solid #250013;
@@ -14,6 +21,16 @@ h1{
 	background-color:#F0F0E9;
 	padding:10px;
 	padding-left:20px;
-	margin-right:300px;
+	margin-right:50px;
+	margin-left:50px;
 	margin-top:20px;
 }
+#home-logo{margin-top:10px;margin-right:-70px}
+
+.input-section{
+	font-family: 'Roboto', sans-serif;
+	text-align:center;}
+	
+#label-input-para,#label-input-user-info{margin-left:80px;}
+#generate-button{margin-left:0px;}
+	

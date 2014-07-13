@@ -28,7 +28,17 @@ Route::get('/lorem_ipsum', function()
 
 });
 
+Route::post('/lorem_ipsum', function()
+{
+	 return View::make('lorem_ipsum');
+});
+
 Route::get('/user_info', function()
+{
+	return View::make('user_info');
+});
+
+Route::post('/user_info', function()
 {
 	return View::make('user_info');
 });
