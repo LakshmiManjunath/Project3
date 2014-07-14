@@ -2,7 +2,7 @@
 
 <!-- This tag rewrites the title section-->
 @section('title')
-	Random Lorem Ipsum text
+	Random-Lorem-Ipsum-text
 @stop
 
 <!-- This tag adds file-specific contents to body section-->

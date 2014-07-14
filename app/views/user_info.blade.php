@@ -2,7 +2,7 @@
 
 <!-- This tag rewrites the title section-->
 @section('title')
-	Random User Information
+	Random-User-Information
 @stop
 
 <!-- This tag adds file-specific contents to body section-->

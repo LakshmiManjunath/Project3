@@ -5,7 +5,7 @@
 <!-- This way of specifying section allows us to re-write it when extended  -->
 	<title> 
 		@section('title')
-			Project3: Developer's Best Friend
+			Project3-Developer's-Best-Friend
 		@show
 	</title>
 <!-- Customized style sheet for Project 3-->	
