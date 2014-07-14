@@ -11,33 +11,31 @@
 |
 */
 
-/*Route::get('/', function()
-{
-	return View::make('hello');
-}); */
-
+// Route for the index or Home page 
 Route::get('/', function()
 {
 	return View::make('index');
 });
 
+// Route for Lorem Ipsum text generator, 'GET' method
 Route::get('/lorem_ipsum', function()
-{
-	 
+{ 
 	 return View::make('lorem_ipsum');
-
 });
 
+// Route for Lorem Ipsum text generator, 'POST' method
 Route::post('/lorem_ipsum', function()
 {
 	 return View::make('lorem_ipsum');
 });
 
+// Route for User Information generator, 'GET' method
 Route::get('/user_info', function()
 {
 	return View::make('user_info');
 });
 
+// Route for User Information generator, 'POST' method
 Route::post('/user_info', function()
 {
 	return View::make('user_info');

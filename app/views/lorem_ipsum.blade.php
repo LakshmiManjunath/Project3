@@ -1,39 +1,48 @@
 @extends('_master')
 
+<!-- This tag rewrites the title section-->
 @section('title')
 	Random Lorem Ipsum text
 @stop
 
+<!-- This tag adds file-specific contents to body section-->
 @section('body')
-	
-	<h1 class="header_lorem_ipsum" align="centre">Project 3: <span style="background-color:#4F004F;border-radius:10px;color:#D8D8D2;padding-left:15px;padding-right:15px;">Random Lorem Ipsum Paragraphs</span></h1>
+<!-- Adding file-specific <h1> tag -->
+	<h1 class="header_lorem_ipsum">Project 3: <span style="background-color:#4F004F;border-radius:10px;color:#D8D8D2;padding-left:15px;padding-right:15px;">Random Lorem Ipsum Paragraphs</span></h1>
 @stop
 
+<!-- This tag adds file-specific contents to content section-->
 @section('content')
+<form action='{{ URL::asset('/lorem_ipsum'); }}' method="POST">
 
-<form action='<?php echo URL::asset('/lorem_ipsum'); ?>' method="POST">
-
+<!-- Beginning of section which accepts number of paragraphs from the user -->
 <div class="input-section">
-<?php $word_count = isset($_POST['word_count']) ? $_POST['word_count'] : ''; ?>
 
-	<a href='<?php echo URL::asset('/'); ?>'><img src='<?php echo URL::asset('/images/home-logo.png'); ?>' alt="home-logo" id="home-logo">HOME</a>
+<!-- Checks if the paragraph count is set -->
+<?php $para_count = isset($_POST['para_count']) ? $_POST['para_count'] : ''; ?>
+
+<!-- Link to Home-page -->
+<a href='{{ URL::asset('/'); }}'><img src='{{ URL::asset('/images/home-logo.png'); }}' alt="home-logo" id="home-logo">HOME</a>
 	
+<!-- choosing number of paragraphs to generate -->
 	<label id="label-input-para" for="no_para">Number of paragraphs 
-	<select id="no_para" name="word_count"> 
+	<select id="no_para" name="para_count"> 
 			<option value="">Select value</option>
-			<option value='1' <?php if($word_count == 1){echo "selected='selected'";} ?>>1</option>
-			<option value='2' <?php if($word_count == 2){echo "selected='selected'";} ?>>2</option>
-			<option value='3' <?php if($word_count == 3){echo "selected='selected'";} ?>>3</option>
-			<option value='4' <?php if($word_count == 4){echo "selected='selected'";} ?>>4</option>
-			<option value='5' <?php if($word_count == 5){echo "selected='selected'";} ?>>5</option>
-			<option value='6' <?php if($word_count == 6){echo "selected='selected'";} ?>>6</option>
-			<option value='7' <?php if($word_count == 7){echo "selected='selected'";} ?>>7</option>
-			<option value='8' <?php if($word_count == 8){echo "selected='selected'";} ?>>8</option>
-			<option value='9' <?php if($word_count == 9){echo "selected='selected'";} ?>>9</option>
-		</select><span style="color:red;font-size:15px;">*Select atleast one word</span></label>
-	<br><input id="generate-button" type="submit" value="Generate Lorem-Ipsum text">
+			<option value='1' @if($para_count == 1){{"selected='selected'";}} @endif >1</option>
+			<option value='2' @if($para_count == 2){{"selected='selected'";}} @endif >2</option>
+			<option value='3' @if($para_count == 3){{"selected='selected'";}} @endif >3</option>
+			<option value='4' @if($para_count == 4){{"selected='selected'";}} @endif >4</option>
+			<option value='5' @if($para_count == 5){{"selected='selected'";}} @endif >5</option>
+			<option value='6' @if($para_count == 6){{"selected='selected'";}} @endif >6</option>
+			<option value='7' @if($para_count == 7){{"selected='selected'";}} @endif >7</option>
+			<option value='8' @if($para_count == 8){{"selected='selected'";}} @endif >8</option>
+			<option value='9' @if($para_count == 9){{"selected='selected'";}} @endif >9</option>
+	</select><span style="color:red;font-size:15px;">*Select atleast one word</span></label><br>
+	<input id="generate-button" type="submit" value="Generate Lorem-Ipsum text">
 </div>
+
 <div class="lorem_ipsum">
+<!-- Includes logic for generating lorem-ipsum text based on the user input -->
 	<?php
 		$path = app_path().'/controllers/lorem_ipsum_logic.php';
 		require $path;
