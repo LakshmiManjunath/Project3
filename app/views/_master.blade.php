@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 <!-- This way of specifying section allows us to re-write it when extended  -->
-<title> 
-	@section('title')
-		Project3: Developer's Best Friend
-	@show
-</title>
+	<title> 
+		@section('title')
+			Project3: Developer's Best Friend
+		@show
+	</title>
 <!-- Customized style sheet for Project 3-->	
-		<link rel="stylesheet" href="styles/styles.css" type="text/css">
+	<link rel="stylesheet" href="styles/styles.css" type="text/css">
 <!-- Google font Roboto used on the body section -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <!-- This tag delimits the header section-->
 @yield('head')
 </head>
